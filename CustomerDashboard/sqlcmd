@@ -1,0 +1,21 @@
+create table Bookings(
+Booking_id varchar(100) primary key not null,
+Sender_name varchar(100),
+Sender_address varchar(100),
+Sender_contact varchar(20),
+Receiver_name varchar(100),
+Receiver_address varchar(100),
+Receiver_pin integer(15),
+Receiver_mobile varchar(20),
+Parcel_weight double,
+Parcel_content_desc varchar(100),
+Parcel_delivery_type varchar(100),
+Parcel_packing_preferences varchar(100),
+Pickup_time DATETIME NOT NULL,
+Dropoff_time DATETIME NOT NULL,
+Service_cost double,
+Payment_time DATETIME NOT NULL,
+Status varchar(100) default "pending" not null);
+
+drop table Bookings;
+select UserId,Booking_id,Payment_time,Receiver_name,Receiver_Address,Service_cost FROM Bookings,UserProfile where Fullname="Somay Das";

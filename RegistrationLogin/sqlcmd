@@ -1,0 +1,12 @@
+create table UserProfile(
+UserId integer primary key autoincrement,
+FullName varchar(100) not null,
+Address varchar(100),
+Email varchar(100) not null unique,
+MobileNumber varchar(20),
+Password varchar(100),
+Role varhcar(100));
+
+insert into UserProfile(FullName,Address,Email,MobileNumber,Password,Role) values('Somay Das',"859,Motilal Gupta Road,Kolkata-700082",'somay.das@tcs.com','919748537451','Somay@123','admin')
+
+select * from UserProfile;
